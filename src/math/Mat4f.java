@@ -43,6 +43,11 @@ public class Mat4f
 
     /* Methods */
 
+    public Mat4f multiply(Mat4f other)
+    {
+        return new Mat4f();
+    }
+
     private void setRow(Vec4f row, int id)
     {
         this.elements[id + 0 * 4] = row.x;
