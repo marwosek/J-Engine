@@ -1,7 +1,7 @@
 package test;
 
-import math.Mat4f;
-import math.Vec2f;
+import core.math.Mat4f;
+import core.math.Vec2f;
 
 public class TestMain
 {
