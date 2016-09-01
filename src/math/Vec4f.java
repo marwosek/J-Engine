@@ -44,6 +44,104 @@ public class Vec4f
         this.w = other.w;
     }
 
+    /* Static methods */
+
+    public static Vec4f Add(Vec4f vec, float value)
+    {
+        Vec4f result = new Vec4f();
+
+        result.x = vec.x + value;
+        result.y = vec.y + value;
+        result.z = vec.z + value;
+        result.w = vec.w + value;
+
+        return result;
+    }
+
+    public static Vec4f Subtract(Vec4f vec, float value)
+    {
+        Vec4f result = new Vec4f();
+
+        result.x = vec.x - value;
+        result.y = vec.y - value;
+        result.z = vec.z - value;
+        result.w = vec.w - value;
+
+        return result;
+    }
+
+    public static Vec4f Multiply(Vec4f vec, float value)
+    {
+        Vec4f result = new Vec4f();
+
+        result.x = vec.x * value;
+        result.y = vec.y * value;
+        result.z = vec.z * value;
+        result.w = vec.w * value;
+
+        return result;
+    }
+
+    public static Vec4f Divide(Vec4f vec, float value)
+    {
+        Vec4f result = new Vec4f();
+
+        result.x = vec.x / value;
+        result.y = vec.y / value;
+        result.z = vec.z / value;
+        result.w = vec.w / value;
+
+        return result;
+    }
+
+    public static Vec4f Add(Vec4f first, Vec4f other)
+    {
+        Vec4f result = new Vec4f();
+
+        result.x = first.x + other.x;
+        result.y = first.y + other.y;
+        result.z = first.z + other.z;
+        result.w = first.w + other.w;
+
+        return result;
+    }
+
+    public static Vec4f Subtract(Vec4f first, Vec4f other)
+    {
+        Vec4f result = new Vec4f();
+
+        result.x = first.x - other.x;
+        result.y = first.y - other.y;
+        result.z = first.z - other.z;
+        result.w = first.w - other.w;
+
+        return result;
+    }
+
+    public static Vec4f Multiply(Vec4f first, Vec4f other)
+    {
+        Vec4f result = new Vec4f();
+
+        result.x = first.x * other.x;
+        result.y = first.y * other.y;
+        result.z = first.z * other.z;
+        result.w = first.w * other.w;
+
+        return result;
+    }
+
+    public static Vec4f Divide(Vec4f first, Vec4f other)
+    {
+        Vec4f result = new Vec4f();
+
+        result.x = first.x / other.x;
+        result.y = first.y / other.y;
+        result.z = first.z / other.z;
+        result.w = first.w / other.w;
+
+        return result;
+    }
+
     /* Methods */
 
     public Vec4f add(float value)

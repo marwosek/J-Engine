@@ -34,6 +34,88 @@ public class Vec2f
         this.y = other.y;
     }
 
+    /* Static methods */
+
+    public static Vec2f Add(Vec2f vec, float value)
+    {
+        Vec2f result = new Vec2f();
+
+        result.x = vec.x + value;
+        result.y = vec.y + value;
+
+        return result;
+    }
+
+    public static Vec2f Subtract(Vec2f vec, float value)
+    {
+        Vec2f result = new Vec2f();
+
+        result.x = vec.x - value;
+        result.y = vec.y - value;
+
+        return result;
+    }
+
+    public static Vec2f Multiply(Vec2f vec, float value)
+    {
+        Vec2f result = new Vec2f();
+
+        result.x = vec.x * value;
+        result.y = vec.y * value;
+
+        return result;
+    }
+
+    public static Vec2f Divide(Vec2f vec, float value)
+    {
+        Vec2f result = new Vec2f();
+
+        result.x = vec.x / value;
+        result.y = vec.y / value;
+
+        return result;
+    }
+
+    public static Vec2f Add(Vec2f first, Vec2f second)
+    {
+        Vec2f result = new Vec2f();
+
+        result.x = first.x + second.x;
+        result.y = first.y + second.y;
+
+        return result;
+    }
+
+    public static Vec2f Subtract(Vec2f first, Vec2f second)
+    {
+        Vec2f result = new Vec2f();
+
+        result.x = first.x - second.x;
+        result.y = first.y - second.y;
+
+        return result;
+    }
+
+    public static Vec2f Multiply(Vec2f first, Vec2f second)
+    {
+        Vec2f result = new Vec2f();
+
+        result.x = first.x * second.x;
+        result.y = first.y * second.y;
+
+        return result;
+    }
+
+    public static Vec2f Divide(Vec2f first, Vec2f second)
+    {
+        Vec2f result = new Vec2f();
+
+        result.x = first.x / second.x;
+        result.y = first.y / second.y;
+
+        return result;
+    }
+
     /* Methods */
 
     public Vec2f add(float value)

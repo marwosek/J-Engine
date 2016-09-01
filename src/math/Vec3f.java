@@ -39,6 +39,96 @@ public class Vec3f
         this.z = other.z;
     }
 
+    /* Static methods */
+
+    public static Vec3f Add(Vec3f vec, float value)
+    {
+        Vec3f result = new Vec3f();
+
+        result.x = vec.x + value;
+        result.y = vec.y + value;
+        result.z = vec.z + value;
+
+        return result;
+    }
+
+    public static Vec3f Subtract(Vec3f vec, float value)
+    {
+        Vec3f result = new Vec3f();
+
+        result.x = vec.x - value;
+        result.y = vec.y - value;
+        result.z = vec.z - value;
+
+        return result;
+    }
+
+    public static Vec3f Multiply(Vec3f vec, float value)
+    {
+        Vec3f result = new Vec3f();
+
+        result.x = vec.x * value;
+        result.y = vec.y * value;
+        result.z = vec.z * value;
+
+        return result;
+    }
+
+    public static Vec3f Divide(Vec3f vec, float value)
+    {
+        Vec3f result = new Vec3f();
+
+        result.x = vec.x / value;
+        result.y = vec.y / value;
+        result.z = vec.z / value;
+
+        return result;
+    }
+
+    public static Vec3f Add(Vec3f first, Vec3f second)
+    {
+        Vec3f result = new Vec3f();
+
+        result.x = first.x + second.x;
+        result.y = first.y + second.y;
+        result.z = first.z + second.z;
+
+        return result;
+    }
+
+    public static Vec3f Subtract(Vec3f first, Vec3f second)
+    {
+        Vec3f result = new Vec3f();
+
+        result.x = first.x - second.x;
+        result.y = first.y - second.y;
+        result.z = first.z - second.z;
+
+        return result;
+    }
+
+    public static Vec3f Multiply(Vec3f first, Vec3f second)
+    {
+        Vec3f result = new Vec3f();
+
+        result.x = first.x * second.x;
+        result.y = first.y * second.y;
+        result.z = first.z * second.z;
+
+        return result;
+    }
+
+    public static Vec3f Divide(Vec3f first, Vec3f second)
+    {
+        Vec3f result = new Vec3f();
+
+        result.x = first.x / second.x;
+        result.y = first.y / second.y;
+        result.z = first.z / second.z;
+
+        return result;
+    }
+
     /* Methods */
 
     public Vec3f add(float value)
