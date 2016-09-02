@@ -2,12 +2,14 @@ package test;
 
 import core.math.Mat4f;
 import core.math.Vec2f;
+import static core.serialization.SerializationWriter.*;
 
 public class TestMain
 {
 
     public static void main(String[] args)
     {
+        /*
         Vec2f a = new Vec2f();
         Vec2f b = new Vec2f(1.0f);
         Vec2f c = new Vec2f(2.0f, 5.0f);
@@ -35,5 +37,33 @@ public class TestMain
         System.out.println(mat_a);
         System.out.println();
         System.out.println(mat_c);
+        */
+
+        byte[] store = new byte[16];
+
+        int data_int = -2147483648;
+        short data_short = -32768;
+        long data_long = -9223372036854775808L;
+        float data_float = Float.MIN_VALUE;
+        boolean data_boolean = true;
+
+        int pointer = WriteBytes(store, 0, data_boolean);
+        printHex(store);
+
+        //int reassembled_int = ReadInt(store, 0);
+        //short reassembled_short = ReadShort(store, 0);
+        //long reassembled_long = ReadLong(store, 0);
+        //float reassembled_float = ReadFloat(store, 0);
+        boolean reassembled_boolean = ReadBoolean(store, 0);
+        System.out.println(reassembled_boolean);
+    }
+
+    static void printHex(byte[] data)
+    {
+        for (int i = 0; i < data.length; i++)
+        {
+            System.out.printf("0x%x ", data[i]);
+        }
+        System.out.println();
     }
 }

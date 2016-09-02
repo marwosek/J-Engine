@@ -58,6 +58,7 @@ public class TestLWJGL {
         // Setup a key callback. It will be called every time a key is pressed, repeated or released.
         glfwSetKeyCallback(window, new KeyCallback());
         glfwSetMouseButtonCallback(window, new MouseCallback());
+        glfwSetCursorPosCallback(window, new CursorPosCallback());
 
         // Get the resolution of the primary monitor
         GLFWVidMode vidmode = glfwGetVideoMode(glfwGetPrimaryMonitor());
